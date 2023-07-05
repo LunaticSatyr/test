@@ -55,27 +55,26 @@
     autoHeightBtn.textContent = "auto";
     autoHeightBtn.onclick = () => {
         banner.style.height = "auto";
+        numInput.value = banner.clientHeight;
     };
     imgHeightControl.append(numInput, autoHeightBtn);
     controlSection.append(imgHeightControl);
 
     const imgFitControl = document.createElement("div");
     imgFitControl.textContent = "How should the image fit into homepage? ";
-    const fillBtn = document.createElement("button");
-    fillBtn.textContent = "fill";
-    fillBtn.onclick = () => {
-        banner.style.objectFit = "fill";
-    };
-    const coverBtn = document.createElement("button");
-    coverBtn.textContent = "cover";
-    coverBtn.onclick = () => {
-        banner.style.objectFit = "cover";
-    };
-    const containBtn = document.createElement("button");
-    containBtn.textContent = "contain";
-    containBtn.onclick = () => {
-        banner.style.objectFit = "contain";
-    };
-    imgFitControl.append(fillBtn, coverBtn, containBtn);
+    imgFitControl.classList.add("d-flex", "gap-2");
+    ["fill", "cover", "contain"].forEach(fit => {
+        const label = document.createElement("label");
+        label.classList.add("text-nowrap");
+        const input = document.createElement("input");
+        input.type = "radio";
+        input.name = "fit";
+        input.oninput = () => {
+            banner.style.objectFit = fit;
+        };
+        label.append(input, ` ${fit}`);
+        imgFitControl.append(label);
+    });
+    const fillRadio = document.createElement("input");
     controlSection.appendChild(imgFitControl);
 })();
