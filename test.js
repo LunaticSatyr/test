@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Preview QL Resources Banner
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.1
 // @description  A temporary solution for admin to preview QL Resources Banner in different dimensions
 // @author       LEE MEN LONG
 // @match        https://www.jobmajestic.com/en/
@@ -11,7 +11,6 @@
 
 (function() {
     'use strict';
-    alert("HOI");
     
     const trainHomeSection = document.querySelector("section#train-home-section");
     const companyBannerSection = document.createElement("section");
@@ -34,7 +33,6 @@
         const imgUrl = URL.createObjectURL(imgFile);
         banner.onload = () => {
             URL.revokeObjectURL(imgUrl);
-            console.log("oi");
         };
         banner.src = imgUrl;
     };
