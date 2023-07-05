@@ -11,6 +11,8 @@
 
 (function() {
     'use strict';
+alert("HOI");
+    
     const trainHomeSection = document.querySelector("section#train-home-section");
     const companyBannerSection = document.createElement("section");
     companyBannerSection.classList.add("container", "px-4");
