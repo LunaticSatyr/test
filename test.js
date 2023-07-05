@@ -11,7 +11,7 @@
 
 (function() {
     'use strict';
-alert("HOI");
+    alert("HOI");
     
     const trainHomeSection = document.querySelector("section#train-home-section");
     const companyBannerSection = document.createElement("section");
@@ -34,7 +34,7 @@ alert("HOI");
         const imgUrl = URL.createObjectURL(imgFile);
         banner.onload = () => {
             URL.revokeObjectURL(imgUrl);
-            console.log("revoked");
+            console.log("oi");
         };
         banner.src = imgUrl;
     };
