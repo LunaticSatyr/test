@@ -47,11 +47,14 @@
     numInput.step = 1;
     numInput.min = 0;
     numInput.value = 160;
+    numInput.style.width = "3rem";
     numInput.oninput = () => {
         banner.style.height = `${numInput.valueAsNumber}px`;
     };
     imgHeightControl.append(numInput);
-    controlSection.appendChild(imgHeightControl);
+    const autoHeightBtn = document.createElement("button");
+    autoHeightBtn.textContent = "auto";
+    controlSection.append(imgHeightControl, autoHeightBtn);
 
     const imgFitControl = document.createElement("div");
     imgFitControl.textContent = "How should the image fit into homepage? ";
