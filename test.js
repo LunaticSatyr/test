@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Preview QL Resources Banner
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.1.1
 // @description  A temporary solution for admin to preview QL Resources Banner in different dimensions
 // @author       LEE MEN LONG
 // @match        https://www.jobmajestic.com/*/
