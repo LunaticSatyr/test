@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  A temporary solution for admin to preview QL Resources Banner in different dimensions
 // @author       LEE MEN LONG
-// @match        https://www.jobmajestic.com/en/
+// @match        https://www.jobmajestic.com/*/
 // @icon         https://www.jobmajestic.com/assets/img/favicon/favicon-32x32.png
 // @grant        none
 // ==/UserScript==
